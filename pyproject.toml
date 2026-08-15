@@ -1,0 +1,25 @@
+[project]
+name = "hermes-grokbot"
+version = "0.6.1"
+description = "Merge Hermes Agent with a Grok Bot computer — gateway, doctor, seats."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Pablo Navarro" }]
+keywords = ["hermes-agent", "grok-bot", "xai", "ai-agents"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+[project.scripts]
+hermes-grokbot = "hermes_grokbot.cli:main"
+[project.urls]
+Homepage = "https://github.com/PabloTheThinker/hermes-grokbot"
+Issues = "https://github.com/PabloTheThinker/hermes-grokbot/issues"
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+include = ["hermes_grokbot*"]
+[tool.setuptools.package-data]
+hermes_grokbot = ["gateway_plugin/*"]

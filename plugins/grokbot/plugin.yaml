@@ -1,0 +1,26 @@
+name: grokbot-platform
+label: Grok Bot
+kind: platform
+version: 0.5.0
+description: >
+  Merge Hermes Agent with a Grok Bot computer. Hermes stays the conductor
+  gateway. The Bot computer stays the always-on teammate VM. Mailbox over
+  local folder or SSH. Not Grok-the-model. Not Grok Build.
+author: Pablo Navarro
+requires_env: []
+optional_env:
+  - name: GROKBOT_HOME
+    description: "Local mailbox directory (FROM-HERMES / TO-HERMES)"
+    password: false
+  - name: GROKBOT_SSH
+    description: "SSH target user@host for the Grok Bot computer"
+    password: false
+  - name: GROKBOT_REMOTE_HOME
+    description: "Mailbox path on the Bot computer"
+    password: false
+  - name: GROKBOT_POLL_INTERVAL
+    description: "Seconds between inbound polls (default 8)"
+    password: false
+  - name: GROKBOT_HOME_CHANNEL
+    description: "Chat id for cron delivery (default: chief)"
+    password: false
